@@ -463,6 +463,24 @@
   color: #FF40B3;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+@media (max-width: 1300px) {
+  .promotion .row_1 .el_1, .promotion .row_2 .el_3 {
+    max-width: unset;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .promotion .row_2 .el_3  .el_head {
+    max-width: unset;
+    text-align: center;
+  }
+}
+@media (max-width: 1070px) {
+  .promotion .row_1 .el, .promotion .row_2 .el {
+    max-width: unset;
+    width: 100%;
+  }
+}
 /* promotion end */
 
 /* web3 start */
@@ -793,6 +811,7 @@ swiper-container#web3 img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 120px;
 }
 .paymentSys_content {
   display: flex;
@@ -892,5 +911,91 @@ swiper-container#paysys .el_5 {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
+}
+.paymentSys .paymentSys_promo {
+  min-height: 380px;
+  width: 100%;
+  background-color: #191919;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.paymentSys .paymentSys_promo .paymentSys_promo_content {
+  max-width: 785px;
+  min-height: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 0 40px 40px;
+}
+.paymentSys .paymentSys_promo .paymentSys_promo_content .description {
+  max-width: 639px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+.paymentSys .paymentSys_promo .paymentSys_img {
+  max-width: 615px;
+  width: 100%;
+  height: 380px;
+  min-height: 380px;
+  height: 100%;
+  background-image: url('./img/paySys_promo.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.paymentSys .paymentSys_promo .paymentSys_btn {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  width: 237px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+@media (max-width: 1150px) {
+  .paymentSys .paymentSys_promo {
+    flex-direction: column;
+  }
+  .paymentSys .paymentSys_promo .paymentSys_promo_content {
+    padding: 20px;
+  }
+  .paymentSys .paymentSys_promo .paymentSys_promo_content .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+  }
+  .paymentSys .paymentSys_promo .paymentSys_promo_content .paymentSys_btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    width: 200px;
+    height: 50px;
+  }
+  .paymentSys .paymentSys_promo .paymentSys_img {
+    background-image: url('./img/paySys_promo_mob.jpg');
+    border-radius: 0px 0px 30px 30px;
+    max-width: unset;
+    min-height: unset;
+    height: 225px;
+  }
 }
 /* payment systems end */
