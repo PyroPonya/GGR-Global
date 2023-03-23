@@ -93,11 +93,25 @@
         </div>
       </div>
       <div class="web3_logos">
-        <img src="./assets/img/web3_logo_1.png" class="el_1"></img>
-        <img src="./assets/img/web3_logo_2.png" class="el_2"></img>
-        <img src="./assets/img/web3_logo_3.png" class="el_3"></img>
-        <img src="./assets/img/web3_logo_4.png" class="el_4"></img>
-        <img src="./assets/img/web3_logo_5.png" class="el_5"></img>
+        
+        <swiper-container id="web3" init="false" autoplay="true" freeMode="true" breakpointsBase="container">
+          <swiper-slide>
+            <img src="./assets/img/web3_logo_1.png" class="el_1">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="./assets/img/web3_logo_2.png" class="el_2">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="./assets/img/web3_logo_3.png" class="el_3">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="./assets/img/web3_logo_4.png" class="el_4">
+          </swiper-slide>
+          <swiper-slide>
+            <img src="./assets/img/web3_logo_5.png" class="el_5">
+          </swiper-slide>
+        </swiper-container>
+        
       </div>
     </div>
 
@@ -107,42 +121,42 @@
         <div class="description">An affiliate management system is a software platform that businesses use to manage their affiliate programs. The system typically includes tools for tracking affiliate referrals, generating reports, managing commissions and payouts, and communicating with affiliates</div>
       </div>
       <div class="promo">
-        <div class="el_1">
+        <div class="el el_1">
           <div class="el_image"></div>
           <div class="el_body">
             <div class="el_title">Affiliate Dashboard</div>
             <div class="el_description">The system should provide an easy-to-use dashboard for affiliates to track their referrals, commissions, and payouts.</div>
           </div>
         </div>
-        <div class="el_2">
+        <div class="el el_2">
           <div class="el_image"></div>
           <div class="el_body">
             <div class="el_title">Tracking & Reporting</div>
             <div class="el_description">The system has robust tracking and reporting capabilities to enable businesses to monitor the performance of their affiliate program.</div>
           </div>
         </div>
-        <div class="el_3">
+        <div class="el el_3">
           <div class="el_image"></div>
           <div class="el_body">
             <div class="el_title">Marketing Materials</div>
             <div class="el_description">The system includes tools for providing affiliates with marketing materials such as banners, text links, and landing pages.</div>
           </div>
         </div>
-        <div class="el_4">
+        <div class="el el_4">
           <div class="el_image"></div>
           <div class="el_body">
             <div class="el_title">Commission Management</div>
             <div class="el_description">The system provides tools for managing commissions and payouts to affiliates, including the ability to set commission rates and payout thresholds.</div>
           </div>
         </div>
-        <div class="el_5">
+        <div class="el el_5">
           <div class="el_image"></div>
           <div class="el_body">
             <div class="el_title">Communication</div>
             <div class="el_description">The system includes tools for communicating with affiliates, including email marketing, push notifications, and in-app messaging.</div>
           </div>
         </div>
-        <div class="el_6">
+        <div class="el el_6">
           <div class="el_image"></div>
           <div class="el_body">
             <div class="el_title">Security & Compliance</div>
@@ -153,36 +167,61 @@
     </div>
 
     <div class="paymentSys">
-      <div class="paymentSys_header">
-        <div class="title">Payment systems</div>
-        <div class="description">Payment systems are the tools and processes used by businesses to facilitate financial transactions between them and their customers.
-        <br/>
-         Online gaming businesses require reliable and secure payment systems to enable players to make deposits and withdrawals easily and efficiently</div>
-      </div>
-      <div class="payment_slider">
-        <div class="el_1">
-          <div class="title">Credit&nbsp;and Debit&nbsp;Cards</div>
+      <div class="paymentSys_content">
+        <div class="paymentSys_header">
+          <div class="title">Payment systems</div>
+          <div class="description">Payment systems are the tools and processes used by businesses to facilitate financial transactions between them and their customers.
+          <br/>
+          Online gaming businesses require reliable and secure payment systems to enable players to make deposits and withdrawals easily and efficiently</div>
         </div>
-        <div class="el_2">
-          <div class="title">
-E-Wallets</div>
+        <div class="payment_slider">
+
+          <swiper-container id="paysys" init="false" autoplay="true">
+            <swiper-slide>
+              <div class="el_1">
+                <!-- <div class="title">
+                  Credit&nbsp;and Debit&nbsp;Cards
+                </div> -->
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="el_2">
+                <!-- <div class="title">
+                  E-Wallets
+                </div> -->
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="el_3">
+                <!-- <div class="title">
+                  Bank&nbsp;Transfers
+                </div> -->
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="el_4">
+                <!-- <div class="title">
+                  Cryptocurrencies
+                </div> -->
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="el_5">
+                  <!-- <div class="title">
+                    Prepaid&nbsp;Cards
+                  </div> -->
+              </div>
+            </swiper-slide>
+          </swiper-container>
+
         </div>
-        <div class="el_3">
-          <div class="title">Bank&nbsp;Transfers</div>
+        <div class="paymentSys_promo">
+          <div class="paymentSys_promo_content">
+            <div class="description">0xprocessing is a technologically advanced payment gateway that allows e-commerce platforms, forex, gaming platforms, gambling providers, chatbot services, and any other businesses to accept more than 40 most commonly used cryptocurrencies as payment from users around the globe without restrictions and KYC\KYB.</div>
+            <div class="btn paymentSys_btn"></div>
+          </div>
+          <div class="paymentSys_imag"></div>
         </div>
-        <div class="el_4">
-          <div class="title">Cryptocurrencies</div>
-        </div>
-        <div class="el_5">
-          <div class="title">Prepaid&nbsp;Cards</div>
-        </div>
-      </div>
-      <div class="paymentSys_promo">
-        <div class="paymentSys_promo_content">
-          <div class="description">0xprocessing is a technologically advanced payment gateway that allows e-commerce platforms, forex, gaming platforms, gambling providers, chatbot services, and any other businesses to accept more than 40 most commonly used cryptocurrencies as payment from users around the globe without restrictions and KYC\KYB.</div>
-          <div class="btn paymentSys_btn"></div>
-        </div>
-        <div class="paymentSys_imag"></div>
       </div>
     </div>
 
@@ -273,5 +312,6 @@ E-Wallets</div>
     </div>
   </div>
   <script defer src="./main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </body>
 </html>

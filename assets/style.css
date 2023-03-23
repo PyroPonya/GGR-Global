@@ -234,6 +234,7 @@
 @media (max-width: 1300px) {
   .promotion .row_1, .promotion .row_2 {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .promotion .row_1 .el, .promotion .row_2 .el {
@@ -436,7 +437,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 12px;
+}
+@media (max-width: 500px) {
+  .promotion .row_2 .el_3 > .el_body {
+    flex-wrap: wrap;
+  }
 }
 .promotion .row_2 .el_3 > .el_body > .s1 {
   font-family: 'Unbounded';
@@ -561,6 +568,8 @@
   transform: rotate(-2deg) scale(1.03);
 }
 .web3 .web3_logos {
+  width: 100%;
+  max-width: 830px;
   padding-top: 13px;
   padding-bottom: 13px;
   display: flex;
@@ -568,17 +577,320 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
-.web3 .web3_logos > img {
-  max-width: 141.28px;
-  width: 100%;
+/* .web3 .web3_logos img {
+  width: 141.28px;
   height: 62px;
   background: #272727;
   border-radius: 9.41887px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+} */
+swiper-container#web3 swiper-slide {
+  display: flex;
+  justify-content: center;
 }
-
+swiper-container#web3 img {
+  max-width: 141.28px;
+  width: 100%;
+  width: 141.28px;
+  height: 62px;
+  background: #272727;
+  border-radius: 9.41887px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* margin: 0 auto; */
+}
 /* web3 end */
+
+/* affiliate program start */
+.affProg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+.affProg .affProg_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.affProg .affProg_header .title {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 74px;
+  color: #000000;
+}
+.affProg .affProg_header .description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140.02%;
+  text-align: center;
+  color: #000000;
+  max-width: 1190px;
+}
+.affProg .promo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.affProg .promo .el {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #FAFAFA;
+  border: 1px solid #000000;
+  border-radius: 30px 30px 0px 30px;
+  height: 250px;
+  max-width: 688px;
+}
+.affProg .promo .el .el_image {
+  height: 100%;
+  width: 214px;
+  background-position: top 0px left 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #000000;
+  border-radius: 30px 0px 0px 30px;
+}
+.affProg .promo .el_1 .el_image {
+  background-image: url('./img/aff_el1.jpg');
+}
+.affProg .promo .el_2 .el_image {
+  background-image: url('./img/aff_el2.jpg');
+}
+.affProg .promo .el_3 .el_image {
+  background-image: url('./img/aff_el3.jpg');
+}
+.affProg .promo .el_4 .el_image {
+  background-image: url('./img/aff_el4.jpg');
+}
+.affProg .promo .el_5 .el_image {
+  background-image: url('./img/aff_el5.jpg');
+}
+.affProg .promo .el_6 .el_image {
+  background-image: url('./img/aff_el6.jpg');
+}
+.affProg .promo .el .el_body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 390px;
+  gap: 12px;
+}
+.affProg .promo .el .el_body .el_title {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.affProg .promo .el .el_body .el_description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+}
+@media (max-width: 700px) {
+  /* .affProg .affProg_header {
+
+  } */
+  .affProg .affProg_header .title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .affProg .affProg_header .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140.02%;
+    text-align: center;
+  }
+  .affProg .promo {
+    gap: 10px;
+  }
+  .affProg .promo .el {
+    width: 365px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    border-radius: 16px;
+  }
+  .affProg .promo .el .el_image {
+  height: 145px;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.528986px solid #000000;
+  border-radius: 16px 16px 0px 0px;
+}
+.affProg .promo .el_1 .el_image {
+  background-image: url('./img/aff_el1_mob.jpg');
+}
+.affProg .promo .el_2 .el_image {
+  background-image: url('./img/aff_el2_mob.jpg');
+}
+.affProg .promo .el_3 .el_image {
+  background-image: url('./img/aff_el3_mob.jpg');
+}
+.affProg .promo .el_4 .el_image {
+  background-image: url('./img/aff_el4_mob.jpg');
+}
+.affProg .promo .el_5 .el_image {
+  background-image: url('./img/aff_el5_mob.jpg');
+}
+.affProg .promo .el_6 .el_image {
+  background-image: url('./img/aff_el6_mob.jpg');
+}
+.affProg .promo .el .el_body {
+  padding: 0 10px;
+  max-width: 343px;
+}
+.affProg .promo .el .el_body .el_title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+.affProg .promo .el .el_body .el_description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140.02%;
+}
+}
+/* affiliate program end */
+
+/* payment systems start */
+.paymentSys {
+  width: 100%;
+  max-width: 100%;
+  background: #4F23FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.paymentSys_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--promo_padding);
+  padding-top: 60px;
+  width: calc(100% - var(--promo_padding)*2);
+  max-width: 1440px;
+}
+.paymentSys .paymentSys_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.paymentSys .paymentSys_header .title {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 74px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.paymentSys .paymentSys_header .description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 1255px;
+  margin-bottom: 60px;
+}
+.paymentSys .payment_slider {
+  width: 100%;
+  margin-bottom: 20px;
+}
+swiper-container#paysys .el_1 {
+  width: 260px;
+  height: 160px;
+  background: #FFFFFF;
+  /* border: 1px solid #000000; */
+  border-radius: 20px 20px 0px 20px;
+  background-image: url('./img/paySys_el1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+swiper-container#paysys .el_2 {
+  width: 260px;
+  height: 160px;
+  background: #FFFFFF;
+  /* border: 1px solid #000000; */
+  border-radius: 0px 20px 20px 20px;
+  background-image: url('./img/paySys_el2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+swiper-container#paysys .el_3 {
+  width: 260px;
+  height: 160px;
+  background: #FFFFFF;
+  /* border: 1px solid #000000; */
+  border-radius: 20px 20px 0px 20px;
+  background-image: url('./img/paySys_el3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+swiper-container#paysys .el_4 {
+  width: 260px;
+  height: 160px;
+  background: #FFFFFF;
+  /* border: 1px solid #000000; */
+  border-radius: 0px 20px 20px 20px;
+  background-image: url('./img/paySys_el4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+swiper-container#paysys .el_5 {
+  width: 260px;
+  height: 160px;
+  background: #FFFFFF;
+  /* border: 1px solid #000000; */
+  border-radius: 20px 20px 0px 20px;
+  background-image: url('./img/paySys_el5.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+/* payment systems end */
