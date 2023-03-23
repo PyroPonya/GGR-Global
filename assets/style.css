@@ -40,7 +40,7 @@
 .header .ggr_logo {
   Width: 206px;
   Height: 26px;
-  background-image: url('./img/GGR_logo.png');
+  background-image: url('./img/GGR_logo.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1009,6 +1009,154 @@ swiper-container#paysys .el_5 {
 
 /* license start */
 .license {
-  
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.license .license_header {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.license .license_header .title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.license .license_header .title .t_1 {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 74px;
+  color: #000000;
+}
+.license .license_header .title .t_2 {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 55px;
+  color: #000000;
+}
+.license .license_header .license_controls{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.license .license_header .license_controls .btn {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background: #000000;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.license .license_header .license_controls .btn:hover {
+  background: #00EE34;
+}
+.license .license_header .license_controls .btn_disabled {
+  background-color: gray;
+}
+.license .license_header .license_controls .btn_disabled:hover {
+  background-color: gray;
+  cursor: not-allowed;
 }
 /* license end */
+
+/* footer start */
+.footer {
+  max-width: unset;
+  width: 100%;
+  height: 138px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer_content {
+  max-width: calc(1440px - 80px);
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .footer_content .footer_left, .footer .footer_content .footer_right {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer .footer_content .footer_right {
+  align-items: center;
+}
+.footer .footer_content .footer_left .logo {
+  width: 215.28px;
+  height: 27px;
+  background-image: url('./img/GGR_logo_footer.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer .footer_content .footer_right .socials {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+.footer .footer_content .footer_right .socials .social {
+  cursor: pointer;
+}
+.footer .footer_content .footer_right .socials .telegram {
+  width: 24px;
+  height: 24px;
+  background-image: url('./img/telegram_icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer .footer_content .footer_right .socials .twitter {
+  width: 25px;
+  height: 20.31px;
+  background-image: url('./img/twitter_icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer .footer_content .footer_right .socials .linkedin {
+  width: 24px;
+  height: 24px;
+  background-image: url('./img/linkedin_icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer .footer_content .footer_right .socials .facebook {
+  width: 24px;
+  height: 24px;
+  background-image: url('./img/facebook_icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer .footer_content .footer_right .socials .instagram {
+  width: 24px;
+  height: 24px;
+  background-image: url('./img/instagram_icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* footer end */
