@@ -970,6 +970,13 @@ swiper-container#paysys .el_5 {
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+  transition: var(--default_transition);
+}
+.paymentSys .paymentSys_promo .paymentSys_btn:hover {
+  background: #00EE34;
+  border: 1px solid #000000;
+  color: #000000;
+  transform: rotate(-2deg);
 }
 @media (max-width: 1150px) {
   .paymentSys .paymentSys_promo {
@@ -999,3 +1006,9 @@ swiper-container#paysys .el_5 {
   }
 }
 /* payment systems end */
+
+/* license start */
+.license {
+  
+}
+/* license end */
