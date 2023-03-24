@@ -79,3 +79,49 @@ Object.assign(swiperEl_paysys, swiperParams);
 swiperEl_web3.initialize();
 swiperEl_paysys.initialize();
 // swiper setup end
+
+// textarea form setup start
+const tx = document.getElementsByTagName('textarea');
+for (let i = 0; i < tx.length; i++) {
+  tx[i].setAttribute('style', 'height:' + tx[i].scrollHeight + 'px;overflow-y:hidden;');
+  tx[i].addEventListener('input', OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = 0;
+  this.style.height = this.scrollHeight + 'px';
+}
+// textarea form setup end
+
+// form logic start
+const input_name = document.querySelector('.field_1');
+const input_contact = document.querySelector('.field_2');
+const input_message = document.querySelector('.field_3');
+const form_btn = document.querySelector('.contactForm_btn');
+
+const formData = {
+  'name': '',
+  'contact': '',
+  'message': '',
+}
+const validate = (obj) => {
+  const keys = Object.keys(obj);
+  const valid_val = keys.map(el => obj[el] !== '')
+  const valid_out = valid_val.filter(el => el == '')
+  return valid_out.length > 0 ? false : true;
+}
+
+input_name.addEventListener('input', (e) => {
+  formData.name = e.target.value;
+});
+input_contact.addEventListener('input', (e) => {
+  formData.contact = e.target.value;
+});
+input_message.addEventListener('input', (e) => {
+  formData.message = e.target.value;
+});
+form_btn.addEventListener('click', (e) => {
+  console.log(validate(formData));
+  validate(formData) == true ? console.log('all clear') : console.log('form was not filled correctly');
+})
+// form logic end

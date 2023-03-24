@@ -1155,15 +1155,13 @@ swiper-container#paysys .el_5 {
 /* license end */
 
 /* about us start */
-.license {
-  height: 848px;
-}
 /* @TODO: remove */
 .about {
   position: relative;
   z-index: 0;
   top: -300px;
   padding-top: 300px;
+  margin-bottom: -300px;
   /* height: 958px; */
   height: 658px;
   width: 100%;
@@ -1232,6 +1230,7 @@ swiper-container#paysys .el_5 {
     max-width: unset;
     top: -348px;
     padding-top: 348px;
+    margin-bottom: -348px;
     height: 958px;
     /* height: 1521px; */
     width: 100%;
@@ -1278,6 +1277,113 @@ swiper-container#paysys .el_5 {
   }
 }
 /* about us end */
+
+/* contactForm start */
+.contactForm {
+  width: 100%;
+  max-width: unset;
+  background-color: #4F23FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactForm .contactForm_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 120px 0px 95px 0px; */
+  gap: 60px;
+  background-image: url('./img/form_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 99vw;
+  width: 100%;
+  min-height: 828px;
+  height: 100%;
+}
+.contactForm .contactForm_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 895px;
+}
+.contactForm .contactForm_header .t1, .contactForm .contactForm_header .t1 b, .contactForm .contactForm_header .t2 {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 74px;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+.contactForm .contactForm_header .t2 {
+  font-weight: 300;
+  font-size: 60px;
+}
+.contactForm .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.contactForm .form input, .contactForm .form textarea {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  width: 600px;
+  padding: 20px 40px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+}
+.contactForm .form input {
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 1000px;
+}
+.contactForm .form textarea {
+  border-radius: 20px;
+  resize: none;
+}
+.contactForm .form .btn {
+  background: #00EE34;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+  color: #000000;
+  cursor: pointer;
+  width: 680px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--default_transition);
+}
+.contactForm .form .btn:hover {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 1000px;
+  transform: rotate(-1deg);
+}
+@media (max-width: 700px) {
+  .contactForm .form input, .contactForm .form textarea, .contactForm .form .btn {
+    width: 365px;
+  }
+}
+/* contactForm end */
 
 /* footer start */
 .footer {
