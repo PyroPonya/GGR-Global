@@ -681,6 +681,8 @@ swiper-container#web3 img {
 @media (max-width: 700px) {
   .web3 {
     width: 100%;
+    min-height: unset;
+    padding-top: 60px;
     padding-left: unset;
     padding-right: unset;
   }
@@ -1366,8 +1368,12 @@ swiper-container#paysys .el_5 {
     height: 196px;
   }
   .footer .footer_content {
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
+  }
+  .footer .footer_content .footer_left, .footer .footer_content .footer_right, .footer .footer_content .footer_left div, .footer .footer_content .footer_right div {
+    align-items: center;
+    text-align: center;
   }
 }
 /* footer end */
