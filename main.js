@@ -14,24 +14,26 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // swiper element
 const swiperEl_web3 = document.querySelector('swiper-container#web3');
 const swiperEl_paysys = document.querySelector('swiper-container#paysys');
+const swiperEl_license_desk = document.querySelector('swiper-container#license_desk') || '';
+const swiperEl_license_mob = document.querySelector('swiper-container#license_mob') || '';
 
 // swiper parameters
-const swiperParams = {
-  slidesPerView: 1,
+const swiperParams_paysys = {
+  slidesPerView: 1.15,
   freeMode: true,
   spaceBetween: 20,
   breakpoints: {
     400: {
-      slidesPerView: 1,
+      slidesPerView: 1.35,
     },
     740: {
-      slidesPerView: 2,
+      slidesPerView: 2.25,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 3.25,
     },
     1320: {
-      slidesPerView: 4,
+      slidesPerView: 4.25,
     },
     1440: {
       slidesPerView: 5,
@@ -43,22 +45,22 @@ const swiperParams = {
     },
   },
 };
-const swiperParams_short = {
+const swiperParams_web3 = {
   slidesPerView: 1,
   freeMode: true,
   spaceBetween: 20,
   breakpoints: {
     300: {
-      slidesPerView: 1,
+      slidesPerView: 1.35,
     },
     505: {
-      slidesPerView: 2,
+      slidesPerView: 2.35,
     },
     670: {
-      slidesPerView: 3,
+      slidesPerView: 3.35,
     },
     840: {
-      slidesPerView: 4,
+      slidesPerView: 4.35,
     },
     1010: {
       slidesPerView: 5,
@@ -70,14 +72,79 @@ const swiperParams_short = {
     },
   },
 };
+const swiperParams_license_desk = {
+  slidesPerView: 1,
+  freeMode: true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.btn_next',
+    prevEl: '.btn_prev',
+  },
+  breakpoints: {
+    60: {
+      slidesPerView: 1,
+    },
+    720: {
+      slidesPerView: 1.1,
+    },
+    870: {
+      slidesPerView: 1.3,
+    },
+    940: {
+      slidesPerView: 1.4,
+    },
+    1010: {
+      slidesPerView: 1.5,
+    },
+    1260: {
+      slidesPerView: 1.8,
+    }
+  },
+  on: {
+    init() {
+      // ...
+    },
+  },
+};
+const swiperParams_license_mob = {
+  slidesPerView: 1.05,
+  freeMode: true,
+  spaceBetween: 20,
+  breakpoints: {
+    370: {
+      slidesPerView: 1.2,
+    },
+    535: {
+      slidesPerView: 1.7,
+    },
+    690: {
+      slidesPerView: 2.2,
+    },
+    840: {
+      slidesPerView: 4.2,
+    },
+    1010: {
+      slidesPerView: 5.2,
+    },
+  },
+  on: {
+    init() {
+      // ...
+    },
+  },
+};
 
 // now we need to assign all parameters to Swiper element
-Object.assign(swiperEl_web3, swiperParams_short);
-Object.assign(swiperEl_paysys, swiperParams);
+Object.assign(swiperEl_web3, swiperParams_web3);
+Object.assign(swiperEl_paysys, swiperParams_paysys);
+swiperEl_license_desk !== '' ? Object.assign(swiperEl_license_desk, swiperParams_license_desk) : '';
+swiperEl_license_mob !== '' ? Object.assign(swiperEl_license_mob, swiperParams_license_mob) : '';
 
 // and now initialize it
 swiperEl_web3.initialize();
 swiperEl_paysys.initialize();
+swiperEl_license_desk !== '' ? swiperEl_license_desk.initialize() : '';
+swiperEl_license_mob !== '' ? swiperEl_license_mob.initialize() : '';
 // swiper setup end
 
 // textarea form setup start
