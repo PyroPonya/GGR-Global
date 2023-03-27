@@ -98,7 +98,16 @@ const swiperParams_license_desk = {
     },
     1260: {
       slidesPerView: 1.8,
-    }
+    },
+    1410: {
+      slidesPerView: 2.1,
+    },
+    1490: {
+      slidesPerView: 2.2,
+    },
+    1610: {
+      slidesPerView: 2.4,
+    },
   },
   on: {
     init() {
