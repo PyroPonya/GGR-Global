@@ -226,7 +226,25 @@ form_btn.addEventListener('click', (e) => {
   }
 })
 
+const loader = document.querySelector('.loader');
+const popup = document.querySelector('.popup');
+const popup_btn = document.querySelector('.popup_btn');
+loader.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("popup") && popup.style.display == "flex") {
+    popup.style.display = "none";
+    loader.style.display = "none";
+    return true;
+  } else {
+    return false;
+  }
+});
+popup_btn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  popup.style.display = 'none';
+  loader.style.display = 'none';
+})
 const useFetch = (dataBlob) => {
+  loader.style.display = 'flex';
   const myHeaders = new Headers();
   myHeaders.append('accept', 'application/json');
   myHeaders.append('Content-Type', 'application/json');
@@ -241,6 +259,7 @@ const useFetch = (dataBlob) => {
     .then( response => response.text() )
     .then( response => {
       console.log('response: ' + response);
+      popup.style.display = 'flex';
     })
     .catch((err) => console.log(err));
 }
