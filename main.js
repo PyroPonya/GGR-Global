@@ -172,19 +172,36 @@ function OnInput() {
 // form logic start
 const input_name = document.querySelector('.field_1');
 const input_contact = document.querySelector('.field_2');
-const input_message = document.querySelector('.field_3');
+const input_companyName = document.querySelector('.field_3');
+const input_message = document.querySelector('.field_4');
 const form_btn = document.querySelector('.contactForm_btn');
 
 const formData = {
-  'name': '',
-  'contact': '',
-  'message': '',
+  name: '',
+  contact: '',
+  subject: 'Message from ggr.global site',
+  company: '',
+  message: '',
 }
 const validate = (obj) => {
   const keys = Object.keys(obj);
-  const valid_val = keys.map(el => obj[el] !== '')
-  const valid_out = valid_val.filter(el => el == '')
+  const valid_val = keys.map(el => obj[el] !== '' ||  el == 'company')
+  console.log(valid_val);
+  const valid_out = valid_val.filter(el => el == '' && el !== 'company')
   return valid_out.length > 0 ? false : true;
+}
+
+const formReset = () => {
+  formData.name = '';
+  input_name.value = '';
+  formData.contact = '';
+  input_contact.value = '';
+  formData.company = '';
+  input_companyName.value = '';
+  formData.message = '';
+  input_message.value = '';
+  input_message.style.height = '98px';
+  return console.log('form was cleared');
 }
 
 input_name.addEventListener('input', (e) => {
@@ -193,11 +210,38 @@ input_name.addEventListener('input', (e) => {
 input_contact.addEventListener('input', (e) => {
   formData.contact = e.target.value;
 });
+input_companyName.addEventListener('input', (e) => {
+  formData.company = e.target.value;
+});
 input_message.addEventListener('input', (e) => {
   formData.message = e.target.value;
 });
 form_btn.addEventListener('click', (e) => {
-  console.log(validate(formData));
-  validate(formData) == true ? console.log('all clear') : console.log('form was not filled correctly');
+  if(validate(formData)) {
+    console.log(formData);
+    useFetch(formData);
+    formReset();
+  } else {
+    console.log('form was not filled correctly');
+  }
 })
+
+const useFetch = (dataBlob) => {
+  const myHeaders = new Headers();
+  myHeaders.append('accept', 'application/json');
+  myHeaders.append('Content-Type', 'application/json');
+  myHeaders.append('X-Client-Ip', 'any');
+  myHeaders.append('X-Visitor-Id', 'dont_care');
+  const options = {
+    method: 'POST',
+    headers: myHeaders,
+    body: JSON.stringify(dataBlob),
+  };
+  fetch( 'https://pyroproxy.herokuapp.com/https://pyro-mailer.vercel.app/send', options )
+    .then( response => response.text() )
+    .then( response => {
+      console.log('response: ' + response);
+    })
+    .catch((err) => console.log(err));
+}
 // form logic end
