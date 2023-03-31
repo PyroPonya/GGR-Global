@@ -19,23 +19,38 @@ const swiperEl_license_mob = document.querySelector('swiper-container#license_mo
 
 // swiper parameters
 const swiperParams_paysys = {
-  slidesPerView: 1.15,
+  slidesPerView: 1,
   freeMode: true,
   spaceBetween: 20,
   breakpoints: {
-    400: {
+    390: {
       slidesPerView: 1.35,
     },
-    740: {
-      slidesPerView: 2.25,
+    495: {
+      slidesPerView: 1.75,
     },
-    1024: {
+    580: {
+      slidesPerView: 2,
+    },
+    700: {
+      slidesPerView: 2.5,
+    },
+    830: {
+      slidesPerView: 3,
+    },
+    900: {
       slidesPerView: 3.25,
     },
-    1320: {
+    1000: {
+      slidesPerView: 3.5,
+    },
+    1090: {
+      slidesPerView: 4,
+    },
+    1160: {
       slidesPerView: 4.25,
     },
-    1440: {
+    1340: {
       slidesPerView: 5,
     },
   },
@@ -46,23 +61,23 @@ const swiperParams_paysys = {
   },
 };
 const swiperParams_web3 = {
-  slidesPerView: 1,
+  slidesPerView: 2,
   freeMode: true,
   spaceBetween: 20,
   breakpoints: {
-    300: {
-      slidesPerView: 1.35,
+    375: {
+      slidesPerView: 2.75,
     },
     505: {
-      slidesPerView: 2.35,
+      slidesPerView: 3.45,
     },
     670: {
-      slidesPerView: 3.35,
+      slidesPerView: 3.85,
     },
     840: {
-      slidesPerView: 4.35,
+      slidesPerView: 4.55,
     },
-    1010: {
+    990: {
       slidesPerView: 5,
     },
   },
@@ -73,6 +88,7 @@ const swiperParams_web3 = {
   },
 };
 const swiperParams_license_desk = {
+  // slidesPerView: 1,
   slidesPerView: 1,
   freeMode: true,
   spaceBetween: 20,
@@ -100,19 +116,25 @@ const swiperParams_license_desk = {
       slidesPerView: 1.8,
     },
     1410: {
-      slidesPerView: 2.1,
-    },
-    1490: {
-      slidesPerView: 2.2,
-    },
-    1610: {
-      slidesPerView: 2.4,
+      slidesPerView: 2.15,
     },
   },
   on: {
     init() {
       // ...
     },
+    reachBeginning() {
+      this.navigation.prevEl[0].classList.add('btn_disabled');
+    },
+    reachEnd() {
+      this.navigation.nextEl[0].classList.add('btn_disabled');
+    },
+    slideChange() {
+      if (this.realIndex !== 0 && this.realIndex !== 5) {
+        this.navigation.prevEl[0].classList.contains('btn_disabled') ? this.navigation.prevEl[0].classList.remove('btn_disabled') : '';
+        this.navigation.nextEl[0].classList.contains('btn_disabled') ? this.navigation.nextEl[0].classList.remove('btn_disabled') : '';
+      }
+    }
   },
 };
 const swiperParams_license_mob = {
@@ -187,6 +209,38 @@ const validate = (obj) => {
   const keys = Object.keys(obj);
   const valid_val = keys.map(el => obj[el] !== '' ||  el == 'company')
   console.log(valid_val);
+  valid_val.map((el, id) => {
+    if (el == false) {
+      switch (keys[id]) {
+        case 'name':
+          input_name.classList.add('input_error')
+          setTimeout(() => {
+            input_name.classList.remove('input_error')
+          }, 3000);
+          break;
+        case 'contact':
+          input_contact.classList.add('input_error');
+          setTimeout(() => {
+            input_contact.classList.remove('input_error');
+          }, 3000);
+          break;
+        case 'company':
+          input_companyName.classList.add('input_error');
+          setTimeout(() => {
+            input_companyName.classList.remove('input_error');
+          }, 3000);
+          break;
+        case 'message':
+          input_message.classList.add('input_error');
+          setTimeout(() => {
+            input_message.classList.remove('input_error');
+          }, 3000);
+          break;
+        default:
+          break;
+      }
+    }
+  })
   const valid_out = valid_val.filter(el => el == '' && el !== 'company')
   return valid_out.length > 0 ? false : true;
 }

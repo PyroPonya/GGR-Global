@@ -225,6 +225,7 @@
     </div>
 
     <div class="license_desk">
+      <div class="gradient"></div>
       <div class="license_container">
         <div class="license_header">
           <div class="title">
@@ -236,7 +237,7 @@
             </span>
           </div>
           <div class="license_controls">
-            <div class="btn btn_prev"></div>
+            <div class="btn btn_prev btn_disabled"></div>
             <!-- <div class="btn btn_prev btn_disabled">-</div> -->
             <div class="btn btn_next"></div>
           </div>
@@ -246,31 +247,11 @@
         <div class="swiper_container">
         <!-- <div class="swiper_pos"> -->
 
-        <swiper-container id="license_desk" init="false" autoplay="true" loop="true">
+        <swiper-container id="license_desk" init="false" autoplay="true" loop="false">
               <swiper-slide>
                 <div class="el el_1">
                   <div class="t">Player support</div>
                   <div class="d">Player support is a critical component of online gaming businesses that provide customer service and assistance to players. Providing effective player support can help businesses build trust and loyalty with their players and can lead to increased revenue and player retention.</div>
-                </div>
-                <div class="el el_2">
-                  <div class="t">VIP Player support</div>
-                  <div class="d">VIP player support is a specialized service provided by online gaming businesses to their most valuable players. These players are often referred to as high rollers or VIPs, and they are typically responsible for a significant portion of the business's revenue. VIP player support is designed to provide these players with a high level of personalized service and support to help them feel valued and keep them coming back.</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="el el_3">
-                  <div class="t">Player retention</div>
-                  <div class="d">Player retention is a critical component of a successful online gaming business. Retaining players is important for several reasons, including increasing revenue, building brand loyalty, and improving player satisfaction.</div>
-                </div>
-                <div class="el el_4">
-                  <div class="t">Analytics</div>
-                  <div class="d">We use advanced analytics tools to collect data on their customers' behavior and preferences. This data can be used to create personalized experiences for each customer, improve marketing strategies, and optimize operations.</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="el el_5">
-                  <div class="t">Anti-fraud measures</div>
-                  <div class="d">We use sophisticated anti-fraud measures to prevent cheating and ensure fair play through AI-powered fraud detection algorithms.</div>
                 </div>
                 <div class="el el_6">
                   <div class="t">Reactivation service</div>
@@ -278,9 +259,19 @@
                 </div>
               </swiper-slide>
               <swiper-slide>
+                <div class="el el_2">
+                  <div class="t">VIP Player support</div>
+                  <div class="d">VIP player support is a specialized service provided by online gaming businesses to their most valuable players. These players are often referred to as high rollers or VIPs, and they are typically responsible for a significant portion of the business's revenue. VIP player support is designed to provide these players with a high level of personalized service and support to help them feel valued and keep them coming back.</div>
+                </div>
                 <div class="el el_7">
                   <div class="t">Anti-fraud support</div>
                   <div class="d">Anti-fraud support is the set of measures and tools put in place by organizations to detect, prevent, and mitigate fraudulent activities. Fraud can take many forms, including identity theft, payment fraud, and cybercrime, and can cause significant financial and reputational damage to businesses.</div>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="el el_3">
+                  <div class="t">Player retention</div>
+                  <div class="d">Player retention is a critical component of a successful online gaming business. Retaining players is important for several reasons, including increasing revenue, building brand loyalty, and improving player satisfaction.</div>
                 </div>
                 <div class="el el_8">
                   <div class="t">Content management</div>
@@ -288,9 +279,19 @@
                 </div>
               </swiper-slide>
               <swiper-slide>
+                <div class="el el_4">
+                  <div class="t">Analytics</div>
+                  <div class="d">We use advanced analytics tools to collect data on their customers' behavior and preferences. This data can be used to create personalized experiences for each customer, improve marketing strategies, and optimize operations.</div>
+                </div>
                 <div class="el el_9">
                   <div class="t">Business consulting & marketing</div>
                   <div class="d">Business consulting and marketing are two important components of a successful business strategy. Business consulting involves providing expert advice and guidance to help businesses improve their operations, increase their profitability, and achieve their goals. Marketing, on the other hand, involves promoting products or services to customers in order to generate sales and increase revenue.</div>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="el el_5">
+                  <div class="t">Anti-fraud measures</div>
+                  <div class="d">We use sophisticated anti-fraud measures to prevent cheating and ensure fair play through AI-powered fraud detection algorithms.</div>
                 </div>
                 <div class="el el_10">
                   <div class="t">Responsible gaming</div>
@@ -298,13 +299,13 @@
                 </div>
               </swiper-slide>
               <swiper-slide>
-                <div class="el el_11">
-                  <div class="t">CRM</div>
-                  <div class="d">CRM stands for Customer Relationship Management, which refers to a set of strategies, practices, and technologies used by businesses to manage their interactions with customers and potential customers. A CRM system typically includes tools for managing customer data, tracking customer interactions, and analyzing customer behavior to improve the customer experience and increase customer loyalty.</div>
-                </div>
                 <div class="el el_12">
                   <div class="t"></div>
                   <div class="d"></div>
+                </div>
+                <div class="el el_11">
+                  <div class="t">CRM</div>
+                  <div class="d">CRM stands for Customer Relationship Management, which refers to a set of strategies, practices, and technologies used by businesses to manage their interactions with customers and potential customers. A CRM system typically includes tools for managing customer data, tracking customer interactions, and analyzing customer behavior to improve the customer experience and increase customer loyalty.</div>
                 </div>
               </swiper-slide>
             </swiper-container>
@@ -416,7 +417,7 @@
       <div class="contactForm_content">
         <div class="contactForm_header">
           <div class="t1">
-            <b>Start earning now</b>
+            Start earning now
           </div>
           <div class="t2">
             with your best experience
@@ -428,7 +429,7 @@
           <input type="text" placeholder="Your company name" class="field_3" />
           <textarea placeholder="Describe your question*️" class="field_4" required></textarea>
           <a>
-            <div class="btn contactForm_btn">Send a message</div>
+            <div class="btn contactForm_btn">Send an application</div>
           </a>
         </div>
       </div>
@@ -456,9 +457,15 @@
   <div style="display: none;" class="loader">
     <div class="loader_item"></div>
     <div style="display: none;" class="popup">
-      Your request was successfully sent!
+      <img src="./assets/img/popup_g.svg" class="popup_logo"></img>
+      <div class="title">
+        Done! Message on the way
+      </div>
+      <div class="text">
+        We will read the message in the near future and contact you by the method of communication you have chosen.
+      </div>
       <btn class="popup_btn">
-        Confirm
+        Go back
       </btn>
     </div>
   </div>
