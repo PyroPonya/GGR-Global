@@ -93,7 +93,7 @@
 }
 @media (max-width: 700px) {
   .header {
-    position: static;`
+    position: static;
   }
   .header .nev_el {
     display: none;
@@ -1299,6 +1299,9 @@ swiper-container#paysys .el_5 {
   background-color: #00EE34;
 }
 .license_desk .license_header .license_controls .btn_disabled {
+  background-color: gray;
+}
+.license_desk .license_header .license_controls .swiper-button-disabled {
   background-color: gray;
 }
 .license_desk .license_header .license_controls .btn_disabled:hover {
