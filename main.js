@@ -134,6 +134,9 @@ const swiperParams_license_desk = {
         this.navigation.prevEl[0].classList.contains('btn_disabled') ? this.navigation.prevEl[0].classList.remove('btn_disabled') : '';
         this.navigation.nextEl[0].classList.contains('btn_disabled') ? this.navigation.nextEl[0].classList.remove('btn_disabled') : '';
       }
+      if (this.previousIndex == 3 && this.realIndex == 4) {
+        this.navigation.nextEl[0].classList.add('btn_disabled');
+      }
     }
   },
 };
