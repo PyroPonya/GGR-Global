@@ -123,21 +123,21 @@ const swiperParams_license_desk = {
     init() {
       // ...
     },
-    reachBeginning() {
-      this.navigation.prevEl[0].classList.add('btn_disabled');
-    },
-    reachEnd() {
-      this.navigation.nextEl[0].classList.add('btn_disabled');
-    },
-    slideChange() {
-      if (this.realIndex !== 0 && this.realIndex !== 5) {
-        this.navigation.prevEl[0].classList.contains('btn_disabled') ? this.navigation.prevEl[0].classList.remove('btn_disabled') : '';
-        this.navigation.nextEl[0].classList.contains('btn_disabled') ? this.navigation.nextEl[0].classList.remove('btn_disabled') : '';
-      }
-      if (this.previousIndex == 3 && this.realIndex == 4) {
-        this.navigation.nextEl[0].classList.add('btn_disabled');
-      }
-    }
+    // reachBeginning() {
+    //   this.navigation.prevEl[0].classList.add('btn_disabled');
+    // },
+    // reachEnd() {
+    //   this.navigation.nextEl[0].classList.add('btn_disabled');
+    // },
+    // slideChange() {
+    //   if (this.realIndex !== 0 && this.realIndex !== 5) {
+    //     this.navigation.prevEl[0].classList.contains('btn_disabled') ? this.navigation.prevEl[0].classList.remove('btn_disabled') : '';
+    //     this.navigation.nextEl[0].classList.contains('btn_disabled') ? this.navigation.nextEl[0].classList.remove('btn_disabled') : '';
+    //   }
+    //   if (this.previousIndex == 3 && this.realIndex == 4) {
+    //     this.navigation.nextEl[0].classList.add('btn_disabled');
+    //   }
+    // }
   },
 };
 const swiperParams_license_mob = {
